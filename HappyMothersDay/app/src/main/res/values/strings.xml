@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Happy Mother\'s Day</string>
+    <string name="happy_mothers_day_text">Happy Mother\'s Day,\nAmanda!</string>
+    <string name="signature_text">From Riley and Brad.</string>
 </resources>
