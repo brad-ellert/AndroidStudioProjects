@@ -1,4 +1,4 @@
-package com.example.happybirthday
+package com.example.happymothersday
 
 import org.junit.Test
 

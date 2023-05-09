@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.happybirthday'
+    namespace 'com.example.happymothersday'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.happybirthday"
+        applicationId "com.example.happymothersday"
         minSdk 19
         targetSdk 33
         versionCode 1
