@@ -13,6 +13,8 @@ import android.widget.Toast
  * In this Activity, a user can roll a die and the result is displayed on the screen.
  */
 class MainActivity : AppCompatActivity() {
+    private val die = Die(6)
+    private lateinit var diceImage: ImageView
 
     /**
      * The onCreate() function is a lifecycle function of an Android Activity.
@@ -23,10 +25,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Find the ImageView in the layout
+        diceImage = findViewById(R.id.imageView)
+
         // Reference to the "Roll" button in the layout
         val rollButton: Button = findViewById(R.id.button)
 
-        // Set a click listener on the Roll button. When clicked, a toast message is shown and the rollDice() function is called.
+        // Set a click listener on the Roll button. When clicked, a toast message is shown and the
+        // rollDice() function is called.
         rollButton.setOnClickListener {
             Toast.makeText(this, "Die Rolled!", Toast.LENGTH_SHORT).show()
             rollDice()
@@ -40,25 +46,13 @@ class MainActivity : AppCompatActivity() {
      * Roll the die and update the screen with the result.
      */
     private fun rollDice() {
-        // Create new Die object with 6 sides and roll the die
-        val die = Die(6)
+        // Roll the die
         val diceRoll = die.roll()
 
-        // Find the ImageView in the layout
-        val diceImage: ImageView = findViewById(R.id.imageView)
-
-        // Determine which drawable resource ID to use based on the die roll
-        val drawableResource = when (diceRoll) {
-            1 -> R.drawable.dice_1
-            2 -> R.drawable.dice_2
-            3 -> R.drawable.dice_3
-            4 -> R.drawable.dice_4
-            5 -> R.drawable.dice_5
-            else -> R.drawable.dice_6
-        }
-
-        // Update the ImageView with the correct drawable resource ID
-        diceImage.setImageResource(drawableResource)
+        // Update the ImageView with the correct drawable resource ID based on the die roll
+        diceImage.setImageResource(
+            resources.getIdentifier("dice_$diceRoll", "drawable", this.packageName)
+        )
 
         // Update the content description
         diceImage.contentDescription = diceRoll.toString()
