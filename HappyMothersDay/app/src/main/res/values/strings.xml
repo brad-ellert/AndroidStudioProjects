@@ -2,4 +2,6 @@
     <string name="app_name">Happy Mother\'s Day</string>
     <string name="happy_mothers_day_text">Happy Mother\'s Day,\nAmanda!</string>
     <string name="signature_text">From Riley and Brad.</string>
+    <string name="channel_name">Mother\'s Day Notifications</string>
+    <string name="channel_description">Notifications for Mother\'s Day</string>
 </resources>

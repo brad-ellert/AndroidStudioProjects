@@ -2,4 +2,6 @@
     <string name="app_name">母の日おめでとう</string>
     <string name="happy_mothers_day_text">母の日おめでとう,\nアマンダ!</string>
     <string name="signature_text">ライリーと\nブラッドから。</string>
+    <string name="channel_name">母の日の通知</string>
+    <string name="channel_description">母の日の通知</string>
 </resources>
